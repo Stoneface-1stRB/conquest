@@ -181,29 +181,6 @@
     <script>
         const validFileNames = ['map.png', 'jokers.png', 'ironwolves.png', 'apaches.png', 'misfits.png', 'mjolnir.png', 'phantom.png', 'highlanders.png'];
         const maxFileSize = 20 * 1024 * 1024; // 20 MB
-
-        function checkPassword() {
-            const password = document.getElementById('password').value;
-            if (password === 'domination') {
-                document.getElementById('uploadButton').style.display = 'block';
-            } else {
-                alert('Incorrect password');
-            }
-        }
-
-        function validateFile() {
-            const fileInput = document.getElementById('uploadButton');
-            const file = fileInput.files[0];
-
-            if (file) {
-                if (validFileNames.includes(file.name) && file.size <= maxFileSize) {
-                    alert('File is valid and ready to upload.');
-                } else {
-                    alert('Invalid file. Please ensure it is a .png file and matches the required names.');
-                    fileInput.value = ''; // Clear the input
-                }
-            }
-        }
     </script>
 </body>
 </html>
