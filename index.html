@@ -67,7 +67,7 @@
 			border-color: rgb(85, 225, 40); /* RGB color for text */
             padding: 10px; /* Padding for better appearance */
             margin: 20px auto; /* Center the box on the page */
-            font-size: 24px; /* Font size */
+            font-size: 32px; /* Font size */
 			font-family: 'Unispace', monospace;
             border-radius: 0px; /* Rounded corners */
 			justify-content: center;
@@ -89,6 +89,9 @@
             max-width: 100%; /* Responsive image */
             height: auto; /* Maintain aspect ratio */
 			}
+		.imghidden {
+			display: none;
+		}
         .content {
             display: none;
 			font-family: 'Unispace', monospace;
@@ -125,6 +128,7 @@
         1ST MARINE DIVISION : CONQUEST
     </div>
 	<img id="map" class="mapimg" src="map.png" alt="map">
+    <img src="map2.png" class="imghidden">
 	<button id="campaign">CLICK HERE TO SHOW EXAMPLE CAMPAIGN START</button>
 	<script>
     let isImage1 = true;
@@ -157,15 +161,22 @@
     });
 	</script>
 	<div id="forces">
-        <img src="apaches.png" class="img" id="apaches" alt="apaches">
-        <img src="mjolnir.png" class="img" id="mjolnir" alt="mjolnir">
-	<img src="phantom.png" class="img" id="phantom" alt="phantom">
-	<img src="ironwolves.png" class="img" id="ironwolves" alt="ironwolves">
-	<img src="jokers.png" class="img" id="jokers" alt="jokers">
-	<img src="misfits.png" class="img" id="misfits" alt="misfits">
-	<img src="highlanders.png" class="img" id="highlanders" alt="highlanders">
-	<img src="empty.png" class="img" id="empty" alt="empty">
+        <img src="apaches.png" class="img" id="apaches" alt="company">
+        <img src="mjolnir.png" class="img" id="mjolnir" alt="company">
+		<img src="phantom.png" class="img" id="phantom" alt="company">
+		<img src="ironwolves.png" class="img" id="ironwolves" alt="company">
+		<img src="jokers.png" class="img" id="jokers" alt="company">
+		<img src="misfits.png" class="img" id="misfits" alt="company">
+		<img src="highlanders.png" class="img" id="highlanders" alt="company">
+		<img src="empty.png" class="img" id="empty" alt="company">
 	</div>
+	<img src="apachesex.png" class="imghidden">
+	<img src="mjolnirex.png" class="imghidden">
+	<img src="phantomex.png" class="imghidden">
+	<img src="ironwolvesex.png" class="imghidden">
+	<img src="jokersex.png" class="imghidden">
+	<img src="misfitsex.png" class="imghidden">
+	<img src="highlandersex.png" class="imghidden">
 	<div class="title" onclick="toggleContent('content1')"> -SETUP-</div>
     <div id="content1" class="content">
 	<p>All Company leaders or representatives will roll to determine the order in which they will pick maps.</p>
