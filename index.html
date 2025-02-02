@@ -36,8 +36,21 @@
             border: 5px solid #ccc; /* Optional border */
 			border-color: rgb(85, 225, 40); /* RGB color for text */
             padding: 10px; /* Padding for better appearance */
-            margin: 0px auto; /* Center the box on the page */
+            margin: 20px top; /* Center the box on the page */
             font-size: 32px; /* Font size */
+			font-family: 'Unispace', monospace;
+            border-radius: 0px; /* Rounded corners */
+			justify-content: center;
+        }
+		.botbanner {
+            width: 95%; /* Custom width */
+            text-align: center; /* Center text alignment */
+            color: rgb(85, 225, 40); /* RGB color for text */
+            border: 5px solid #ccc; /* Optional border */
+			border-color: rgb(85, 225, 40); /* RGB color for text */
+            padding: 10px; /* Padding for better appearance */
+            margin-top: 20px; /* Center the box on the page */
+            font-size: 24px; /* Font size */
 			font-family: 'Unispace', monospace;
             border-radius: 0px; /* Rounded corners */
 			justify-content: center;
@@ -64,11 +77,12 @@
 			border-color: rgb(85, 225, 40); /* RGB color for text */
             padding: 10px; /* Padding for better appearance */
             margin: 20px auto; /* Center the box on the page */
-            font-size: 24px; /* Font size */
+            font-size: 32px; /* Font size */
 			font-family: 'Unispace', monospace;
             border-radius: 0px; /* Rounded corners */
 			justify-content: center;
 			cursor: pointer;
+			display: none;
         }
 		#forces {
             border: 2.5px solid #000; /* Border around the image */
@@ -125,7 +139,6 @@
         1ST MARINE DIVISION : CONQUEST
     </div>
 	<img id="map" class="mapimg" src="map.png" alt="map">
-    <img src="map2.png" class="imghidden">
 	<button id="campaign">CLICK HERE TO SHOW EXAMPLE CAMPAIGN START</button>
 	<script>
     let isImage1 = true;
@@ -248,6 +261,20 @@
             }
         }
     </script>	
+	    <div class="botbanner">
+        BELOW IS AN EXAMPLE OF THE START OF A CAMPAIGN
+    </div>
+		<img id="map" class="mapimg" src="mapex.png" alt="map">
+	<div id="forces">
+        <img src="apachesex.png" class="img" id="apaches" alt="company">
+        <img src="mjolnirex.png" class="img" id="mjolnir" alt="company">
+		<img src="phantomex.png" class="img" id="phantom" alt="company">
+		<img src="ironwolvesex.png" class="img" id="ironwolves" alt="company">
+		<img src="jokersex.png" class="img" id="jokers" alt="company">
+		<img src="misfitsex.png" class="img" id="misfits" alt="company">
+		<img src="highlandersex.png" class="img" id="highlanders" alt="company">
+		<img src="empty.png" class="img" id="empty" alt="company">
+	</div>
 	<label for="password">ADMIN ONLY:</label>
     <input type="password" id="password" placeholder="Enter password" />
     <button onclick="checkPassword()">Submit</button>
