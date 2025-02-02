@@ -11,7 +11,7 @@
             font-family: 'Unispace', monospace;
             margin: 0; /* Removes default margin */
             padding: 20px; /* Adds some padding for better spacing */
-		max-width: 1550px;
+			max-width: 1550px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -26,8 +26,8 @@
             padding: 10px; /* Padding for better appearance */
             margin: 0px auto; /* Center the box on the page */
             font-size: 32px; /* Font size */
-		font-family: 'Unispace', monospace;
-		justify-content: center;
+			font-family: 'Unispace', monospace;
+			justify-content: center;
         }
 		.topbanner {
             width: 95%; /* Custom width */
@@ -42,14 +42,38 @@
             border-radius: 0px; /* Rounded corners */
 			justify-content: center;
         }
-		.map {
+		#map img {
             border: 5px solid #000; /* Border around the image */
 			border-color: rgb(85,225,40);
-            padding: 0px; /* Space between the border and the image */
             margin-top: 20px; /* Space above the image */
-			justify-content: center;
+            padding: 10px; /* Padding for better appearance */
         }
-		.forces {
+		#map img.active {
+			display: block;
+		}
+		.mapimg {
+		    border: 5px solid #000; /* Border around the image */
+			border-color: rgb(85,225,40);
+            margin-top: 20px; /* Space above the image */
+            padding: 0px; /* Padding for better appearance */
+			width: 95%;
+		}
+		#campaign {
+            width: 95%; /* Custom width */
+            text-align: center; /* Center text alignment */
+            color: rgb(85, 225, 40); /* RGB color for text */
+			background-color: rgb(0,0,0);
+            border: 5px solid #ccc; /* Optional border */
+			border-color: rgb(85, 225, 40); /* RGB color for text */
+            padding: 10px; /* Padding for better appearance */
+            margin: 20px auto; /* Center the box on the page */
+            font-size: 32px; /* Font size */
+			font-family: 'Unispace', monospace;
+            border-radius: 0px; /* Rounded corners */
+			justify-content: center;
+			cursor: pointer;
+        }
+		#forces {
             border: 2.5px solid #000; /* Border around the image */
 			border-color: rgb(85,225,40);
             padding: 0px; /* Space between the border and the image */
@@ -61,7 +85,7 @@
 			margin-bottom: 20px;
 			justify-content: center;
 		}
-        img {
+        .img {
             max-width: 100%; /* Responsive image */
             height: auto; /* Maintain aspect ratio */
 			}
@@ -100,18 +124,47 @@
     <div class="topbanner">
         1ST MARINE DIVISION : CONQUEST
     </div>
-	<div class="map">
-        <img src="map.png" alt="WORLD MAP">
-    </div>
-	<div class="forces">
-        <img src="apaches.png" alt="company">
-        <img src="mjolnir.png" alt="company">
-		<img src="phantom.png" alt="company">
-		<img src="ironwolves.png" alt="company">
-		<img src="jokers.png" alt="company">
-		<img src="misfits.png" alt="company">
-		<img src="highlanders.png" alt="company">
-		<img src="empty.png" alt="company">
+	<img id="map" class="mapimg" src="map.png" alt="map">
+	<button id="campaign">CLICK HERE TO SHOW EXAMPLE CAMPAIGN START</button>
+	<script>
+    let isImage1 = true;
+    const imageElement = document.getElementById('map');
+    const switchButton = document.getElementById('campaign');
+
+    switchButton.addEventListener('click', () => {
+        if (isImage1) {
+            imageElement.src = 'mapex.png';
+			document.getElementById('apaches').src = 'apachesex.png';
+            document.getElementById('mjolnir').src = 'mjolnirex.png';
+            document.getElementById('phantom').src = 'phantomex.png';
+            document.getElementById('ironwolves').src = 'ironwolvesex.png';
+            document.getElementById('jokers').src = 'jokersex.png';
+            document.getElementById('misfits').src = 'misfitsex.png';
+            document.getElementById('highlanders').src = 'highlandersex.png';
+            document.getElementById('empty').src = 'empty.png';
+        } else {
+            imageElement.src = 'map.png';
+			document.getElementById('apaches').src = 'apaches.png';
+            document.getElementById('mjolnir').src = 'mjolnir.png';
+            document.getElementById('phantom').src = 'phantom.png';
+            document.getElementById('ironwolves').src = 'ironwolves.png';
+            document.getElementById('jokers').src = 'jokers.png';
+            document.getElementById('misfits').src = 'misfits.png';
+            document.getElementById('highlanders').src = 'highlanders.png';
+            document.getElementById('empty').src = 'empty.png';
+        }
+        isImage1 = !isImage1;
+    });
+	</script>
+	<div id="forces">
+        <img src="apaches.png" class="img" id="apaches" alt="company">
+        <img src="mjolnir.png" class="img" id="mjolnir" alt="company">
+		<img src="phantom.png" class="img" id="phantom" alt="company">
+		<img src="ironwolves.png" class="img" id="ironwolves" alt="company">
+		<img src="jokers.png" class="img" id="jokers" alt="company">
+		<img src="misfits.png" class="img" id="misfits" alt="company">
+		<img src="highlanders.png" class="img" id="highlanders" alt="company">
+		<img src="empty.png" class="img" id="empty" alt="company">
 	</div>
 	<div class="title" onclick="toggleContent('content1')"> -SETUP-</div>
     <div id="content1" class="content">
