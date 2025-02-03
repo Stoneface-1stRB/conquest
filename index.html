@@ -69,7 +69,7 @@
             height: auto; /* Maintain aspect ratio */
 			}
         .content {
-            display: none;
+            display: block;
 			font-family: 'Unispace', monospace;
             font-size: 12px; /* Font size */
 			text-align: left;
@@ -183,24 +183,24 @@
 	<script>
         function toggleContent(id) {
             var content = document.getElementById(id);
-            if (content.style.display === "none" || content.style.display === "") {
-                content.style.display = "block";
-            } else {
+            if (content.style.display === "block" || content.style.display === "") {
                 content.style.display = "none";
+            } else {
+                content.style.display = "block";
             }
         }
     </script>
 	<div class="map">
-        <img src="mapEX.png" alt="WORLD MAP">
+        <img src="mapex.png" alt="WORLD MAP">
     </div>
 	<div class="forces">
-        <img src="apachesEX.png" alt="company">
-        <img src="MJOLNIREX.png" alt="company">
-		<img src="phantomEX.png" alt="company">
-		<img src="ironwolvesEX.png" alt="company">
-		<img src="jokersEX.png" alt="company">
-		<img src="misfitsEX.png" alt="company">
-		<img src="highlandersEX.png" alt="company">
+        <img src="apachesex.png" alt="company">
+        <img src="mjolnirex.png" alt="company">
+		<img src="phantomex.png" alt="company">
+		<img src="ironwolvesex.png" alt="company">
+		<img src="jokersex.png" alt="company">
+		<img src="misfitsex.png" alt="company">
+		<img src="highlandersex.png" alt="company">
 		<img src="empty.png" alt="company">
 	</div>
 	<label for="password">ADMIN ONLY:</label>
